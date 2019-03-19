@@ -1,0 +1,89 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! For color scheme custom
+#include ".colors/default"
+
+! ----------------------------------
+! Rofi Settings
+! ----------------------------------
+
+rofi.modi:                           ssh,window,drun,run
+rofi.sidebar-mode:                   false
+rofi.terminal:                       urxvt
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
+rofi.opacity:                        100
+rofi.width:                          25
+rofi.lines:                          7
+rofi.columns:                        1
+rofi.font:                           ClearSansMedium 13
+rofi.drun-icon-theme:                Papirus
+!rofi.show-icons:                    true
+rofi.bw:                             10
+rofi.location:                       0
+rofi.padding:                        20
+rofi.levenshtein-sort:               true
+rofi.case-sensitive:                 false
+rofi.fuzzy:                          false
+rofi.line-margin:                    10
+rofi.separator-style:                solid
+rofi.hide-scrollbar:                 true
+rofi.markup-rows:                    false
+rofi.scrollbar-width: 0
+rofi.color-enabled: true
+! State:           ´bg´,     ´fg´,     ´bgalt´,  ´hlbg´,   ´hlfg´
+rofi.color-normal: #282a36,  #5a74ca,  #282a36,  #5a74ca,  #282a36
+rofi.color-urgent: #282a36,  #5a74ca,  #282a36,  #5a74ca,  #282a36
+rofi.color-active: #282a36,  #5a74ca,  #282a36,  #5a74ca,  #282a36
+!                  ´background´, ´border´
+rofi.color-window: #282a36,      #75444A57
+
+
+! ----------------------------------
+! urxvt Settings
+! ----------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            1000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+urxvt.background: rgba:0000/0000/0200/c800
+
+! Appearance
+URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=10:antialias=true,xft:Inconsolata\ For\ Powerline:size=10:antialias=true
+URxvt.imFont:         xft:Terminus (TTF) for Powerline:MediumForPowerline:size=10:antialias=true,xft:Inconsolata\ For\ Powerline:size=10:antialias=true
+URxvt.boldFont:       xft:Terminus (TTF) for Powerline:MediumForPowerline:size=10:antialias=true,xft:Inconsolata\ For\ Powerline:size=10:antialias=true
+URxvt.italicFont:     xft:Terminus (TTF) for Powerline:MediumForPowerline:size=10:antialias=true,xft:Inconsolata\ For\ Powerline:size=10:antialias=true
+URxvt.boldItalicFont: xft:Terminus (TTF) for Powerline:MediumForPowerline:size=10:antialias=true,xft:Inconsolata\ For\ Powerline:size=10:antialias=true
+
+! Fix font space
+URxvt*letterSpace: -6
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          chromium
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true

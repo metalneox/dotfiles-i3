@@ -1,0 +1,303 @@
+[colors]
+accent = #5a74ca
+background = ${xrdb:background}
+#background = #00000000
+background-alt = ${xrdb:color4}
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:color7}
+primary = ${xrdb:color6}
+secondary = ${xrdb:color13}
+alert = ${xrdb:color5}
+blue = ${xrdb:color4}
+
+[settings]
+#screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+########################################################################################
+# //////////////////////////////////////
+[bar/top]
+monitor = ${env:MONITOR}
+width = 100%
+height = 28
+offset-x = 0
+offset-y = 0
+fixed-center = true
+bottom = false
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 0
+
+font-0 = RobotoMonoMedium:size=12:antialias=true;2
+# Cat unicode: echo -e "\uF31A"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-3 = "Font Awesome 5 Brands:pixelsize=12;2"
+font-4 = "Material Icons:antialias=false:size=12;3"
+font-5 = "unifont:fontformat=truetype:size=12:antialias=false;0"
+
+modules-left = rss gmail tor
+modules-center = i3
+modules-right = xkeyboard cpu memory battery netstat updates-arch-combined date
+
+# wm-restack = i3
+# override-redirect = false
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+# tray-transparent = true
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+# tray-scale = 1.0
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = %icon%
+label-focused-background = ${colors.blue}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+
+label-unfocused = %icon%
+label-unfocused-padding = 1
+
+#%icon%
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;
+
+[module/title]
+type = internal/xwindow
+format-padding = 1
+label = %title%
+label-maxlen = 20
+
+[module/mail]
+type = custom/script
+; 600s = 10min
+interval = 600
+format = " <label> "
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+exec = ~/.config/polybar/scripts/mails.sh
+;click-left = termite -e mutt
+
+[module/rss]
+type = custom/text
+content = 
+content-foreground = ${colors.primary}
+click-left = termite -e newsboat &
+click-right = 
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+;format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+;format-prefix-foreground = ${colors.primary}
+label = %percentage_used%%
+
+[module/mpd]
+type = internal/mpd
+interval = 1
+format-online =  <label-song> <label-time> <icon-prev>  <icon-seekb>  <icon-stop>  <toggle>  <icon-seekf>  <icon-next>  <icon-repeat>  <icon-random>
+
+label-offline = mpd is offline
+
+label-song =  %artist%-%title%
+; Awesome Font >                    
+icon-play = 
+icon-pause = 
+icon-stop =  
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf = 
+icon-random = 
+icon-repeat = 
+icon-repeatone = 
+
+toggle-on-foreground = ${colors.primary}
+toggle-off-foreground = ${colors.secondary}
+
+;label-song-maxlen = 25
+;label-song-ellipsis = true
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+format-prefix = " "
+;format-prefix-foreground = ${colors.primary}
+label = %layout%
+
+
+[module/backlight]
+type = internal/backlight
+format = <ramp> <bar>
+#ls -1 /sys/class/backlight/
+card = acpi_video0
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-font = 3
+bar-indicator-foreground = #ff
+bar-fill = ─
+bar-fill-font = 3
+bar-fill-foreground = #c9665e
+bar-empty = ─
+bar-empty-font = 3
+bar-empty-foreground = #44 
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750 
+
+[module/off]
+type = custom/text
+content = 
+content-foreground = ${colors.primary}
+click-left = ~/.config/polybar/scripts/logout.sh
+content-margin-right = 0
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+content-foreground = ${colors.primary}
+interval = 600
+;600 = 10mins
+
+[module/date]
+type = internal/date
+
+interval = 5
+
+date = %d/%m/%y
+time = %H:%M
+
+;date-alt = %A, %d %B %Y
+;time-alt = %H:%M:%S
+
+label = %date% %time%
+format = <label>
+;format-background = #ddffffff
+;format-background = #88000000
+;format-foreground = #333
+;format-padding = 3j
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/scripts/gmail/launch.py
+tail = true
+click-left = xdg-open https://mail.google.com
+interval = 600
+
+[module/netstat]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+format-prefix-foreground = ${colors.primary}
+label-connected = "%{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed%"
+
+[module/info-redshift-temp]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-redshift-temp.sh
+interval = 5
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "%{F#00ff00} %{F-}"
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+
+[module/tor]
+type = custom/script
+exec = ~/.config/polybar/scripts/status.sh tor
+interval = 6
+format = <label>
+format-padding = 1

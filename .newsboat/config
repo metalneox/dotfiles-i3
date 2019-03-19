@@ -1,0 +1,13 @@
+# Settings.
+article-sort-order date-asc
+notify-always yes
+notify-beep yes
+notify-format "%d new articles (%n unread articles, %f unread feeds)"
+
+
+# Vim-like keybindings.
+bind-key k up
+bind-key j down
+bind-key ^B pageup
+bind-key ^F pagedown
+bind-key d delete-article
