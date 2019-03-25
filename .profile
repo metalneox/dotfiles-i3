@@ -1,2 +1,2 @@
-mpd ~/.config/mpd/mpd.conf
+#mpd ~/.config/mpd/mpd.conf
 
