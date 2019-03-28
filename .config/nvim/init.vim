@@ -1,3 +1,5 @@
+"""call plug#begin('~/.vim/plugins')
+
 call plug#begin('~/.config/nvim/plugged') "NeoVim
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
@@ -27,7 +29,7 @@ call plug#begin('~/.config/nvim/plugged') "NeoVim
 call plug#end()
 
 " General Vim settings
-set shell=bash\ --login
+" set shell=bash\ --login
 set nocompatible
 set cursorline
 set cmdheight=2
@@ -44,6 +46,7 @@ set wildmenu
 set nobackup
 set noswapfile
 set hidden
+set clipboard=unnamedplus
 "Gvim se taglia icone e vim
 set ambiwidth=double
 syntax on

@@ -13,4 +13,7 @@ alias vim="nvim"
 alias dd="dd status=progress"
 alias grep="grep --color=auto" 
 alias diff="diff --color=auto" 
+alias termbin="nc termbin.com 9999"
+alias getclip="xclip -selection c -o"
+alias setclip="xclip -selection c"
 
