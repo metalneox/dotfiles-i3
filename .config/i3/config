@@ -162,6 +162,8 @@ bindsym $mod+space exec --no-startup-id xkblayout-state set +1
 
 # Make screenshot
 bindsym Print exec ~/.config/i3/scripts/scrot.sh
+bindsym $mod+Print exec ~/.config/i3/scripts/maimpick.sh
+
 
 # ClipBoard
 #bindsym $mod+Insert exec --no-startup-id ~/.config/i3/scripts/clip.sh
