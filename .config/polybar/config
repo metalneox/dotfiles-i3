@@ -35,15 +35,14 @@ padding-right = 1
 module-margin-left = 2
 module-margin-right = 0
 
-font-0 = RobotoMonoMedium:size=13:antialias=true;2
-# Cat unicode: echo -e "\uF31A"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;2"
-font-4 = "Material Icons:antialias=false:size=12;3"
-font-5 = "unifont:fontformat=truetype:size=12:antialias=false;0"
+font-0 = "DejaVu Sans:pixelsize=14;3"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=14;3"
+font-2 = "Weather Icons:size=12;3"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=14;3"
+font-4 = "Font Awesome 5 Brands:pixelsize=14;3"
 
-modules-left = rss gmail tor
+
+modules-left = rss gmail tor openweathermap
 modules-center = i3
 modules-right = xkeyboard cpu memory battery netstat updates-arch-combined date
 
@@ -54,7 +53,7 @@ cursor-scroll = ns-resize
 
 tray-position = right
 tray-detached = false
-tray-maxsize = 16
+#tray-maxsize = 20
 # tray-transparent = true
 tray-background = ${colors.background}
 tray-offset-x = 0
@@ -238,7 +237,7 @@ content-margin-right = 0
 
 [module/updates-arch-combined]
 type = custom/script
-exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+exec = ~/.config/polybar/scripts/updates.sh
 content-foreground = ${colors.primary}
 interval = 600
 ;600 = 10mins
@@ -255,7 +254,7 @@ time = %H:%M
 ;time-alt = %H:%M:%S
 
 label = %date% %time%
-format = <label>
+format =  <label>
 ;format-background = #ddffffff
 ;format-background = #88000000
 format-foreground = #61afef
@@ -294,3 +293,10 @@ exec = ~/.config/polybar/scripts/status.sh tor
 interval = 6
 format = <label>
 format-padding = 1
+
+[module/openweathermap]
+type = custom/script
+exec = ~/.config/polybar/scripts/openweathermap.sh
+interval = 600
+label-font = 3
+

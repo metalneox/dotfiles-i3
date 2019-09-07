@@ -214,7 +214,7 @@ exec --no-startup-id "setxkbmap -layout it,us -option 'grp:win_space_toggle,grp_
 exec --no-startup-id "numlockx"
 
 # Compton
-exec --no-startup-id compton -f
+#exec --no-startup-id compton -f
 
 #Redshift
 #exec --no-startup-id redshift-gtk

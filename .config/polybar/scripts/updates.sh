@@ -26,3 +26,4 @@ if [ "$updates_aur" -gt 0 ]; then
 else
     echo -n "0"
 fi
+
