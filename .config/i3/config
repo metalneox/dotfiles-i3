@@ -97,7 +97,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 #Ctrl+Alt+Cancel
-bindsym Ctrl+Mod1+Delete exec ~/.config/polybar/scripts/logout.sh
+bindsym Ctrl+Mod1+Delete exec ~/.config/i3/scripts/logout.sh
+
+#Video manager
+bindsym $mod+Ctrl+v exec ~/.config/i3/scripts/video.sh
 
 #i3-gaps
 gaps inner 10
@@ -179,6 +182,9 @@ new_float pixel 1
 
 #polybar
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
+
+#Notification deamon
+exec_always --no-startup-id dunst 
 
 #Network-manager-applet
 exec --no-startup-id nm-applet
