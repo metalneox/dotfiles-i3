@@ -16,6 +16,9 @@ then
 elif [ "$DIALOG_RESULT" = "Mini Video" ];
 then
     notify-send -t 3000 --icon=video-display "Playing Mini Video" "$(xclip -o)";
-    mpv --ytdl-format=22 --geometry=20%x20%+100%+100% "$(xclip -o)" || mpv --geometry=20%x20%+100%+100% "$(xclip -o)";
+    mpv --ytdl-format=22 --title="mpvfloat" --geometry=20%x20%+100%+100% "$(xclip -o)" || mpv  --title="mpvfloat" --geometry=20%x20%+100%+100% "$(xclip -o)";
     #notify-send -t 3000 --icon=video-display "Non implementato";
 fi
+
+
+

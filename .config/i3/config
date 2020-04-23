@@ -84,9 +84,13 @@ bindsym $mod+0 workspace 10
 for_window [class="Spotify"] move to workspace 9
 for_window [class="Telegram"] move to workspace 10
 
-for_window [class="mpv"] floating enable
-for_window [class="mpv"] sticky enable
-#for_window [class="mpv"] resize set 300 200
+#for_window [class="mpv"] floating enable
+#for_window [class="mpv"] sticky enable
+
+for_window [title="mpvfloat"] floating enable
+for_window [title="mpvfloat"] sticky enable
+for_window [title="mpvfloat"] border pixel 0
+no_focus [title="mpvfloat"]
 
 
 # Move focused container to workspace
