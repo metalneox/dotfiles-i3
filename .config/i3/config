@@ -23,7 +23,7 @@ bindsym $mod+Shift+q kill
 # Start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id ~/.scripts/drun.sh
 
-bindsym $mod+d exec rofi -show drun -show-icons -modi drun
+#bindsym $mod+d exec rofi -show drun -show-icons -modi drun
 
 # Change focus
 #bindsym $mod+h focus left
@@ -233,5 +233,11 @@ exec --no-startup-id "numlockx"
 
 #Redshift
 #exec --no-startup-id redshift-gtk
+
+# Ulauncher 
+#exec --no-startup-id ulauncher
+
+# Albert
+exec --no-startup-id albert
 
 # vim: ft=i3
