@@ -1,6 +1,6 @@
 ! For color scheme custom
-! #include ".colors/default"
-#include ".colors/onedark"
+#include ".colors/default"
+! #include ".colors/onedark"
 
 ! ----------------------------------
 ! Rofi Settings
