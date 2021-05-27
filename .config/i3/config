@@ -13,7 +13,9 @@ font pango:ClearSansMedium 9
 floating_modifier $mod
 
 #Terminal 
-bindsym $mod+Return exec --no-startup-id termite
+#bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id alacritty
+
 #bindsym $mod+Return exec --no-startup-id "urxvt -name floating"
 #bindsym $mod+r exec --no-startup-id "urxvt -name float -e ranger"
 
@@ -239,5 +241,8 @@ exec --no-startup-id "numlockx"
 
 # Albert
 exec --no-startup-id albert
+
+# Eww
+exec --no-startup-id ~/bin/eww daemon
 
 # vim: ft=i3

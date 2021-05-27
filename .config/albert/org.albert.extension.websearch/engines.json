@@ -40,11 +40,5 @@
         "name": "DuckDuckGo",
         "trigger": "dd ",
         "url": "https://duckduckgo.com/?q=%s"
-    },
-    {
-        "iconPath": "/home/metalneox/.config/albert/org.albert.extension.websearch/{33967303-e9fe-4fb5-b20d-ae62b4a082d1}.svg",
-        "name": "PornHub",
-        "trigger": "ph",
-        "url": "https://www.pornhub.com/video/search?search=%s"
     }
 ]
