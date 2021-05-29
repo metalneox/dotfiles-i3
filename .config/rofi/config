@@ -2,7 +2,7 @@
 ! Rofi Settings
 ! ----------------------------------
 
-rofi.modi:                           ssh,window,drun,run
+rofi.modi:                           ssh,window,drun,run,combi,calc
 rofi.sidebar-mode:                   false
 rofi.terminal:                       urxvt
 rofi.ssh-client:                     ssh
