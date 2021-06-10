@@ -6,7 +6,7 @@ call plug#begin('~/.config/nvim/plugged') "NeoVim
   Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
-  Plug 'peterhoeg/vim-qml'
+  "Plug 'peterhoeg/vim-qml'
   Plug 'scrooloose/nerdtree'
   "Plug 'scrooloose/syntastic'
   Plug 'jquintus/vim-log-syntax'
@@ -20,12 +20,17 @@ call plug#begin('~/.config/nvim/plugged') "NeoVim
   Plug 'ryanoasis/vim-devicons'
   Plug 'majutsushi/tagbar'
   "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   "Plug 'Shougo/neoinclude.nvim'
-  Plug 'zchee/deoplete-clang'
+  "Plug 'zchee/deoplete-clang'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   "Genera il file .ycm_extra_conf.py(youcompleteme config) entrando nella cartella e lanciando ::YcmGenerateConfig or :CCGenerateConfig
   ""Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+  "***** New Configuration *******
+  " Use release branch (recommend)
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
 " General Vim settings
