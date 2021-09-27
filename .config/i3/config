@@ -25,7 +25,7 @@ bindsym $mod+Shift+q kill
 # Start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id ~/.scripts/drun.sh
 
-#bindsym $mod+d exec rofi -show drun -show-icons -modi drun
+bindsym $mod+d exec rofi -show drun -show-icons -modi drun
 
 # Change focus
 #bindsym $mod+h focus left
@@ -222,7 +222,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id "setxkbmap -layout it,us -option 'grp:win_space_toggle,grp_led:scroll'"
 
 # Setup normal wallpaper
-#exec feh --bg-scale "~/usr/share/wallpapers/1.jpg"
+exec feh --bg-scale ".local/share/wallpapers/fantasy-forest.jpg"
 
 # Double buffering
 #exec compton
@@ -240,9 +240,9 @@ exec --no-startup-id "numlockx"
 #exec --no-startup-id ulauncher
 
 # Albert
-exec --no-startup-id albert
+#exec --no-startup-id albert
 
 # Eww
-exec --no-startup-id ~/bin/eww daemon
+#exec --no-startup-id ~/bin/eww daemon
 
 # vim: ft=i3
