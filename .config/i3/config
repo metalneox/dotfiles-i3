@@ -236,6 +236,9 @@ exec --no-startup-id "numlockx"
 #Redshift
 #exec --no-startup-id redshift-gtk
 
+#Picom with flag nvidia driver offy
+exec --no-startup-id picom
+
 # Ulauncher 
 #exec --no-startup-id ulauncher
 
