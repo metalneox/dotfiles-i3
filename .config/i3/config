@@ -109,9 +109,14 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 #Ctrl+Alt+Cancel
 bindsym Ctrl+Mod1+Delete exec ~/.config/i3/scripts/logout.sh
+#bindsym Ctrl+Mod1+Delete exec ~/.config/rofi/powermenu/powermenu.sh
 
 #Video manager
 bindsym $mod+Ctrl+v exec ~/.config/i3/scripts/video.sh
+
+# Clipboard
+bindsym $mod+Alt_L exec CM_LAUNCHER=rofi clipmenu
+bindsym $mod+Control+Alt_L exec clipdel -d ".*"
 
 #i3-gaps
 gaps inner 10
@@ -178,10 +183,6 @@ bindsym $mod+space exec --no-startup-id xkblayout-state set +1
 bindsym Print exec ~/.config/i3/scripts/scrot.sh
 bindsym $mod+Print exec ~/.config/i3/scripts/maimpick.sh
 
-
-# ClipBoard
-#bindsym $mod+Insert exec --no-startup-id ~/.config/i3/scripts/clip.sh
-
 # Remove border while only one window opens
 smart_borders on
 
@@ -230,14 +231,14 @@ exec feh --bg-scale ".local/share/wallpapers/fantasy-forest.jpg"
 #NumLock
 exec --no-startup-id "numlockx"
 
+#Picom with flag nvidia driver offy
+#exec --no-startup-id picom --xrender-sync-fence
+
 # Compton
 #exec --no-startup-id compton -f
 
 #Redshift
 #exec --no-startup-id redshift-gtk
-
-#Picom with flag nvidia driver offy
-exec --no-startup-id picom
 
 # Ulauncher 
 #exec --no-startup-id ulauncher
@@ -247,5 +248,8 @@ exec --no-startup-id picom
 
 # Eww
 #exec --no-startup-id ~/bin/eww daemon
+
+#Clipboard	
+exec --no-startup-id clipmenud
 
 # vim: ft=i3
