@@ -209,8 +209,6 @@ exec --no-startup-id udiskie -t &
 
 #Redshift da aur
 #exec --no-startup-id redshift-gtk
-
-# Nitrogen Manager wallpaper
 exec --no-startup-id nitrogen --restore 
 
 #Animate background
@@ -251,5 +249,11 @@ exec --no-startup-id "numlockx"
 
 #Clipboard	
 exec --no-startup-id clipmenud
+
+#Calc
+bindsym $mod+c exec rofi -show calc
+
+#Emoji //keybind migliore da cambiare
+bindsym $mod+t exec rofi -show emoji
 
 # vim: ft=i3

@@ -4,6 +4,7 @@
 ### Dependencies
 - `i3-gaps`
 - `rofi`
+- `rofi-calc`
 - `alacritty`
 - `picom`
 - `maim`
@@ -11,6 +12,7 @@
 - `udiskie`
 - `dunst`
 - `clipmenu`
+
 
 
 ### Aur Dependencies
