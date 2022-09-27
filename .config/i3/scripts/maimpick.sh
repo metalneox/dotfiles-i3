@@ -6,10 +6,10 @@ sleep 1;
 
 if [ "$DIALOG_RESULT" = "a selected area" ];
 then
-    exec maim -s pic-selected-"$(date '+%y%m%d-%H%M-%S').png" 
+    exec maim -s ~/Screenshots/pic-selected-"$(date '+%y%m%d-%H%M-%S').png" 
 elif [ "$DIALOG_RESULT" = "current window" ];
 then
-    exec maim -i "$(xdotool getactivewindow)" pic-window-"$(date '+%y%m%d-%H%M-%S').png"
+    exec maim -i "$(xdotool getactivewindow)" ~/Screenshots/pic-window-"$(date '+%y%m%d-%H%M-%S').png"
 elif [ "$DIALOG_RESULT" = "full screen" ];
 then
     exec maim pic-full-"$(date '+%y%m%d-%H%M-%S').png" 
