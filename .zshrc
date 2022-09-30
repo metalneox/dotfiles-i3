@@ -1,16 +1,16 @@
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=false
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 
 HIST_STAMPS="mm/dd/yyyy"
 
@@ -31,12 +31,14 @@ alias termbin="nc termbin.com 9999"
 alias getclip="xclip -selection c -o"
 alias setclip="xclip -selection c"
 alias rewards="python ~/workspace/Rewards/login_rewards_dev/main.py"
+alias rewards2="python ~/workspace/rewards_temp/main.py"
+
 #alias btm="~/.cargo/bin/btm"
 #alias trunk="~/.cargo/bin/trunk"
 
 
 #History
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE=~/.config/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 HYPHEN_INSENSITIVE="true"
@@ -68,3 +70,4 @@ compinit
 #rust binary
 export PATH="${PATH}:${HOME}/.cargo/bin"
 
+eval "$(starship init zsh)"
