@@ -7,7 +7,7 @@
 # xorg full??
 
 # Base
-sudo pacman -S git dunst nitrogen alacritty rofi rofi-calc rofi-emoji maim i3-gaps curl feh mpv firefox ttf-dejavu otf-font-awesome ttf-font-awesome ttf-ubuntu-font-family ttf-hack papirus-icon-theme picom zip rustup unrar unzip udiskie telegram-desktop tor xdg-user-dirs zsh zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zathura zathura-djvu zathura-pdf-mupdf python otf-font-awesome ttf-font-awesome clipmenu spaceship --noconfirm
+sudo pacman -S git dunst nitrogen alacritty rofi rofi-calc rofi-emoji maim i3-gaps curl feh mpv firefox ttf-dejavu otf-font-awesome ttf-font-awesome ttf-ubuntu-font-family ttf-hack papirus-icon-theme picom zip rustup unrar unzip udiskie telegram-desktop tor xdg-user-dirs zsh zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zathura zathura-djvu zathura-pdf-mupdf python otf-font-awesome ttf-font-awesome clipmenu starship --noconfirm
 
 # Plugin o altro
 sudo pacman -S python-pip --noconfirm
