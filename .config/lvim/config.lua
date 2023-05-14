@@ -230,6 +230,11 @@ lvim.builtin.treesitter.highlight.enable = true
     server = {},
     })
   },
+  --npm install --save-dev @sveltejs/vite-plugin-svelte
+  {'othree/html5.vim'},
+  {'pangloss/vim-javascript'},
+  {'evanleck/vim-svelte'},
+
  }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
