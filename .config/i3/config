@@ -14,7 +14,8 @@ floating_modifier $mod
 
 #Terminal 
 #bindsym $mod+Return exec --no-startup-id termite
-bindsym $mod+Return exec --no-startup-id alacritty
+#bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 
 #bindsym $mod+Return exec --no-startup-id "urxvt -name floating"
 #bindsym $mod+r exec --no-startup-id "urxvt -name float -e ranger"
@@ -180,8 +181,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+space exec --no-startup-id xkblayout-state set +1
 
 # Make screenshot
-bindsym Print exec ~/.config/i3/scripts/scrot.sh
-bindsym $mod+Print exec ~/.config/i3/scripts/maimpick.sh
+#bindsym Print exec ~/.config/i3/scripts/scrot.sh
+#bindsym Print exec ~/.config/i3/scripts/maimpick.sh
+bindsym Print exec "flameshot gui"
 
 # Remove border while only one window opens
 smart_borders on
@@ -234,6 +236,9 @@ exec --no-startup-id "numlockx"
 
 # Compton
 #exec --no-startup-id compton -f
+
+#Picom
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 #Redshift
 #exec --no-startup-id redshift-gtk
