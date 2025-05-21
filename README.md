@@ -1,7 +1,7 @@
-![screenshot](https://raw.githubusercontent.com/metalneox/dotfiles/master/Screenshots/example.png)
-
+![screenshot](https://raw.githubusercontent.com/metalneox/dotfiles-i3/master/Screenshots/example.png)
 
 ### Dependencies
+
 - `i3-gaps`
 - `rofi`
 - `rofi-calc`
@@ -13,8 +13,6 @@
 - `dunst`
 - `clipmenu`
 
-
-
 ### Aur Dependencies
 
 - `polybar`
@@ -25,7 +23,6 @@
 - `brave-bin`
 
 ### Features
-  - [x]  Installation script (Alpha Test)
-  - [ ]  ....
 
-
+- [x]  Installation script (Alpha Test)
+- [ ]  ....
